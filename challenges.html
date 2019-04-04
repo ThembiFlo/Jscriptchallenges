@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Challenges</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+<style> 
+body {
+background-color:yellow;
+border-style:double;
+border-color:black;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Challenge 1</h1>
+<script>
+//Displaying the current day and time.
+
+var today = new Date();//displays the date
+var day = today.getDate();
+var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+document.write("Today is : " + daylist[day]);
+var hour = today.getHours();
+var minute = today.getMinutes();
+var second = today.getSeconds();
+var prepand = hour >= 12 ? "PM" : "AM"; //to determine whether it is AM or PM
+document.write("<br/>");
+document.write("Current Time :" + hour + prepand + ":" + minute + ":" + second);
+</script>
+
+
+<h1>Challenge 2</h1>
+<script>
+//Getting the website URL with a loading page
+
+var url = window.location.href;//returns the href(url) of the current page.
+document.write(url);
+
+</script>
+
+
+<h1>Challenge 3</h1>
+<script>
+//Checking if a string starts with 'Java' and false if otherwise. 
+              
+function start_spec_str(str) {
+  if (str.length < 4) {
+    return false;
+  }
+  front = str.substring(0, 4);
+  if (front == 'Java') {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+document.write(start_spec_str("JavaScript"));
+</script>
+
+
+<h1>Challenge 4</h1>
+<script>
+//Finding the largest number.
+
+var num1 = 105;
+var num2 = 17;
+var num3 = 83;
+function maxNum(num1,num2,num3){
+    if(num1 > num2 && num1 > num3){
+        return num1;
+    }else if(num2 > num1 && num2 > num3){
+        return num2;
+    }else{
+        return num3;
+    }
+}
+document.write(maxNum(105,17,83));
+
+</script>
+
+<h1>Challenge 5</h1>
+<script>
+//Capitalising the first letter of each word.
+
+function capital_letter(str) 
+{
+   var str = str.split(" ");//splitting the words
+
+    for (var i = 0, x = str.length; i < x; i++) {//counting letters
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+}
+
+document.write(capital_letter("deep house"));
+
+</script>
+
+
+<h1>Challenge 6</h1>
+<script>
+//Converting a number to hours and minutes.
+
+function timeConvert(num){
+var num = 507;
+var hours = Math.floor(num / 60);
+var minutes = num % 60;
+return hours + ":" + minutes;
+}
+document.write(timeConvert(507));
+</script>
+
+</body>
+</html>
+
